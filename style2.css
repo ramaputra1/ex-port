@@ -315,3 +315,10 @@ nav .nav-bot {
     padding: 10% 0;
   }
 }
+
+/*footer*/
+footer {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}

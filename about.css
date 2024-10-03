@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: yellow;
+}
+
+body a:hover {
+  zoom: 1.5;
+  transition: 0.2s;
+}
+
+footer {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
