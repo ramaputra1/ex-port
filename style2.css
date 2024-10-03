@@ -11,21 +11,22 @@ body {
 /*Header*/
 header {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh; /* Changed from height to min-height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
   position: absolute;
   top: 0;
-  right: 0;
 }
 
 section {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 90vh; /* Ensure the video section takes up the full height */
 }
 
 .video-1 {
   width: 100%;
-  height: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
 
 /*Header-top*/
@@ -34,13 +35,12 @@ section {
   height: 15%;
 
   display: flex;
-  justify-content: end;
+  justify-content: flex-end; /* Align logo to the right */
   align-items: center;
 }
 
 .htop-logo {
   font-size: 8vh;
-  /* background-color: yellow; */
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -56,30 +56,23 @@ section {
 
 .htop-logo a:hover {
   color: rgb(223, 213, 20);
-
   transition: 0.2s;
 }
 
 /*Header-bottom*/
 .header-bottom {
   width: 100%;
-  height: 85%;
-  /* background-color: rgb(255, 255, 255); */
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
+  flex: 1; /* Allow this section to take remaining space */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right sections */
 }
 
 /*header bottom LEFT*/
 .hbot-left {
   width: 20%;
-  height: 90%;
-  /* background-color: rgb(0, 0, 0); */
   margin: 0 5%;
-  /* border: 1px solid black; */
-  /* background-image: url(image/p.webp); */
-  background-color: rgb(0, 0, 0, 0.9);
-  border: 3px solid rgb(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .hbot-left-top {
@@ -88,29 +81,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid rgb(255, 255, 255, 0.6);
-  /* overflow: hidden; */
-  /* background-color: yellow; */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .profil {
   width: 60%;
   height: 80%;
-  /* background-color: blue; */
 }
 
 .profil a img {
   width: 100%;
   height: 100%;
-  /* border-radius: 900px; */
   object-fit: contain;
 }
 
 .hbot-left-bottom {
   width: 100%;
   height: 60%;
-  /* background-color: rgb(0, 0, 0); */
-  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,24 +106,19 @@ section {
 .data {
   width: 90%;
   height: 90%;
-  /* background-color: blue; */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-
   overflow: hidden;
-  /* font-size: 14px; */
-  /* border: 1px solid red; */
 }
 
 .data a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 2.3vh; /*Im sorrry :(*/
+  font-size: 2.3vh;
   margin: 5% 0;
-  /* border: 1px solid yellow; */
 }
 
 .data a:hover {
@@ -147,8 +129,6 @@ section {
 /*hbot rightttt*/
 .hbot-right {
   width: 60%;
-  height: 90%;
-  /* background-color: rgb(133, 133, 133, 0.1); */
   margin: 0 5%;
   display: flex;
   justify-content: center;
@@ -158,7 +138,6 @@ section {
 .intro {
   width: 90%;
   height: 90%;
-  /* background-color: blueviolet; */
   font-family: "Poppins", sans-serif;
   display: flex;
   color: white;
@@ -184,8 +163,10 @@ section {
 
 /*main*/
 main {
+  /* display: none; */
+  /* position: absolute; */
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background-color: rgb(0, 0, 0);
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -203,8 +184,7 @@ nav a {
 
 .nav-top .about {
   width: 50%;
-  /* height: 50%; */
-  border: 1px solid rgb(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 5% 0;
   font-size: 4.5vh;
@@ -217,8 +197,7 @@ nav a {
 
 .nav-top .projects {
   width: 50%;
-  /* height: 50%; */
-  border: 1px solid rgb(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 5% 0;
   font-size: 4.5vh;
@@ -235,8 +214,7 @@ nav .nav-bot {
 
 .nav-bot .resume {
   width: 50%;
-  /* height: 50%; */
-  border: 1px solid rgb(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 5% 0;
   font-size: 4.5vh;
@@ -249,8 +227,7 @@ nav .nav-bot {
 
 .nav-bot .contact {
   width: 50%;
-  /* height: 50%; */
-  border: 1px solid rgb(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 5% 0;
   font-size: 4.5vh;
@@ -261,4 +238,80 @@ nav .nav-bot {
   transition: 0.2s;
 }
 
-/*Media Queries*/
+/* Media Queries for responsiveness */
+
+/* For tablets and small desktops */
+@media (max-width: 768px) {
+  section {
+    position: static;
+    width: 100%;
+    height: fit-content;
+    /* position: relative; */
+    display: none;
+  }
+  header {
+    /* position: absolute; */
+    border: 1px solid red;
+    position: static;
+    top: 0;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .hbot-left,
+  .hbot-right {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  .htop-logo {
+    font-size: 6vh;
+  }
+
+  .intro {
+    font-size: 3.5vh;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  section {
+    position: static;
+    width: 100%;
+    height: fit-content;
+    /* position: relative; */
+    display: none;
+  }
+  header {
+    /* position: absolute; */
+    border: 1px solid red;
+    position: static;
+    top: 0;
+  }
+  main {
+    position: absolute;
+  }
+
+  .htop-logo {
+    font-size: 4vh;
+  }
+
+  .data a {
+    font-size: 2vh;
+  }
+
+  .intro {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  nav .nav-top a,
+  nav .nav-bot a {
+    font-size: 3vh;
+    padding: 10% 0;
+  }
+}
