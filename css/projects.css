@@ -9,7 +9,7 @@ body a {
   color: yellow;
 }
 
-body a:hover {
+.contact:hover {
   zoom: 1.5;
   transition: 0.2s;
 }
@@ -18,4 +18,16 @@ footer {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
+}
+
+.byuh {
+  width: 250px;
+  height: 150px;
+}
+
+.byuh img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid #3a1078;
 }
